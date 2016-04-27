@@ -28,9 +28,13 @@ public class MineCheckerTest {
 
 
 	@Parameters
-	public static Collection<String []> getFileNames(){
+	public static Collection<String[]> files(){
 		return Arrays.asList(new String [][]{
-				{"example.txt", "solution.txt"}
+				{"example.txt", "solutionExample.txt"},
+				{"basic.txt", "solutionBasic.txt"},
+				{"basic2.txt", "solutionBasic2.txt"},
+				{"allMines.txt", "solutionAllMines.txt"},
+				{"noMines.txt", "solutionNoMines.txt"}
 		});
 	}
 	
