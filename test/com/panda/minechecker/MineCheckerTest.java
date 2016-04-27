@@ -12,7 +12,7 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 @RunWith(Parameterized.class)
-public class MineChekcerTest {
+public class MineCheckerTest {
 	
 	private ArrayInitializer ai;
 	private String inputFilename;
@@ -20,7 +20,7 @@ public class MineChekcerTest {
 	
 	
 
-	public MineChekcerTest(String inputFilename, String solutionFilename) {
+	public MineCheckerTest(String inputFilename, String solutionFilename) {
 		this.ai = new ArrayInitializer();
 		this.inputFilename = inputFilename;
 		this.solutionFilename = solutionFilename;
@@ -36,10 +36,9 @@ public class MineChekcerTest {
 	
 	@Test
 	public void testCompletedHintBoard() {
-		BoardManager bm = new BoardManager();
 		URL input = getClass().getResource(inputFilename);
 		URL solution = getClass().getResource(solutionFilename);
-		MineChecker mc = new MineChecker(bm.createBoard(input.getPath()));
+		MineChecker mc = new MineChecker(input.getPath());
 		mc.completeHintBoard();
 		char expected [][] = ai.readSolution(solution.getPath());
 		assertArrayEquals(expected, mc.getHintBoard());
