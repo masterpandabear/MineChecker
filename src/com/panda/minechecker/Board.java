@@ -34,6 +34,7 @@ public class Board {
 	}
 	
 	public void displayHintBoard(){
+		if(hintMatrix == null) return;
 		System.out.println(arrayToString(hintMatrix));
 	}
 	
@@ -43,14 +44,14 @@ public class Board {
 			for (int j = 0; j < array[0].length; j++) {
 				sb.append(array[i][j]);
 			}
-			sb.append("/n");
+			sb.append("\n");
 		}
 		return sb.toString();
 	}
 
 	@Override
 	public String toString() {
-		return "Board [rows=" + rows + ", cols=" + cols + "]/n" +arrayToString(matrix);
+		return "Board [rows=" + rows + ", cols=" + cols + "]\n" +arrayToString(matrix);
 	}
 	
 	
