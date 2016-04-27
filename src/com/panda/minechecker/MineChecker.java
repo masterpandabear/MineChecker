@@ -2,7 +2,7 @@ package com.panda.minechecker;
 
 public class MineChecker {
 
-	public MineChecker(char[][] createBoard) {
+	public MineChecker(String path) {
 		// TODO Auto-generated constructor stub
 	}
 
